@@ -39,14 +39,52 @@
                         <th>Last name</th>
                         <th>Email</th>
                         <th>Phone</th>
+                        <th></th>
                     </tr>
                 </thead>
-                <tbody>
-                   
+                <tbody id='tableBody'>
+
                 </tbody>
             </table>
+            <div id="modal-js-example" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="field">
+                        <label class="label has-text-white">Name</label>
+                        <div class="control">
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label has-text-white">Lastname</label>
+                        <div class="control">
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label has-text-white">Email</label>
+                        <div class="control">
+                            <input class="input" type="email">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label has-text-white">Phone</label>
+                        <div class="control">
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+             <button class="js-modal-trigger button is-info" data-target="modal-js-example">
+                New Client
+            </button>
         </div>
     </div>
+    <script src="../js/clients.js"></script>
 </body>
 
 </html>
