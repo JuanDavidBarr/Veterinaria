@@ -30,7 +30,7 @@ export const getUser = async ( req , res) =>{
 export const newUser = async ( req , res ) =>{
     try{
         const newClient = req.body;
-        const { rows } = await pool.query('INSERT INTO clients (name, lastname, email, phone) VALUES ($1, $2, $3, $4) RETURNING *', [newClient.name, newClient.lastname, newClient.email, newClient.phone])
+        const { rows } = await pool.query('INSERT INTO clients (nombre, apellido, email, telefono) VALUES ($1, $2, $3, $4) RETURNING *', [newClient.name, newClient.lastname, newClient.email, newClient.phone])
         console.log(rows[0]);
         res.send(rows[0]);  
     } catch (error){
@@ -47,8 +47,7 @@ export const updateUser = async ( req , res ) =>{
     try{
         const { id } = req.params;
         const client = req.body;
-        const { rows, rowCount } = await pool.query('UPDATE clients SET name = $1, lastname = $2, email = $3, phone = $4 WHERE id = $5 RETURNING *', [client.name, client.lastname, client.email, client.phone, id]);
-        console.log(rows);
+        const { rows, rowCount } = await pool.query('UPDATE clients SET nombre = $1, apellido = $2, email = $3, telefono = $4 WHERE id = $5 RETURNING *', [client.name, client.lastname, client.email, client.phone, id]);
         if (rowCount === 0){
             console.log('Client not found');
             return res.status(402).json({ message : "Client not found"});

@@ -50,30 +50,35 @@
                 <div class="modal-background"></div>
                 <div class="modal-content">
                     <div class="field">
-                        <label class="label has-text-white">Name</label>
+                        <label class="label has-text-white" for ="name">Name</label>
                         <div class="control">
-                            <input class="input" type="text">
+                            <input class="input" type ="text" id ="name">
                         </div>
                     </div>
 
                     <div class="field">
-                        <label class="label has-text-white">Lastname</label>
+                        <label class="label has-text-white" for ="lastname">Lastname</label>
                         <div class="control">
-                            <input class="input" type="text">
+                            <input class="input" type="text" id ="lastname">
                         </div>
                     </div>
 
                     <div class="field">
-                        <label class="label has-text-white">Email</label>
+                        <label class="label has-text-white" for="email">Email</label>
                         <div class="control">
-                            <input class="input" type="email">
+                            <input class="input" type="email" id ="email">
                         </div>
                     </div>
 
                     <div class="field">
-                        <label class="label has-text-white">Phone</label>
+                        <label class="label has-text-white" for="phone">Phone</label>
                         <div class="control">
-                            <input class="input" type="text">
+                            <input class="input" type="text" id ="phone">
+                        </div>
+                    </div>
+                    <div class="fiels">
+                        <div class="control">
+                            <button id = "createClientBtn" class="button is-link ">Create</button>
                         </div>
                     </div>
                 </div>
@@ -82,6 +87,44 @@
              <button class="js-modal-trigger button is-info" data-target="modal-js-example">
                 New Client
             </button>
+            <div id="modal-js-example-2" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="field">
+                        <label class="label has-text-white" for ="name_update">Name</label>
+                        <div class="control">
+                            <input class="input" type ="text" id ="name_update">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label has-text-white" for ="lastname_update">Lastname</label>
+                        <div class="control">
+                            <input class="input" type="text" id ="lastname_update">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label has-text-white" for="email_update">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" id ="email_update">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label has-text-white" for="phone_update">Phone</label>
+                        <div class="control">
+                            <input class="input" type="text" id ="phone_update">
+                        </div>
+                    </div>
+                    <div class="fiels">
+                        <div class="control">
+                            <button id = "updateClientBtn" class="button is-link ">Udpdate</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
+            </div>
         </div>
     </div>
     <script src="../js/clients.js"></script>
